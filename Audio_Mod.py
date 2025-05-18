@@ -25,8 +25,7 @@ def upload():
     magnitudes = np.abs(fft_result)
     positive_freqs = freqs[:len(freqs)//2]
     positive_magnitudes = magnitudes[:len(magnitudes)//2]
-    max_index = np.argmax(positive_magnitudes)
-    max_freq = positive_freqs[max_index]
+    max_freq = np.argmax(positive_freqs)
     
     return normalized_data, fs, max_freq
 
